@@ -1,0 +1,110 @@
+.team_member_search_heading {
+  color: white;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 5px;
+}
+
+/* search field */
+
+.team-search-container {
+  position: relative;
+}
+#team-search-field {
+  padding: 7px 30px;
+  border-radius: 10px;
+  background-color: #1f1f1f;
+  border: 1px solid white;
+  color: white;
+  margin-left: 250px;
+}
+.team-search-icon {
+  position: absolute;
+  left: 260px;
+  top: 25%;
+  color: white;
+  list-style: none;
+}
+.view_team_member_div {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-items: center;
+  margin: 0px 20px;
+  padding: 10px;
+  padding-bottom: 0px;
+}
+.view_team_member_nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px 50px;
+  background-color: #1f1f1f;
+  padding:10px 20px ;
+  /* padding-bottom: 0px; */
+  border-radius: 5px;
+}
+.contact_details_div {
+  margin: 3px;
+}
+
+.card_component_div {
+  height: 520px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  overflow-y: scroll;
+  gap: 5px;
+ /* scrollbar-width:thin; */
+}
+.card_component_div::-webkit-scrollbar{
+  width: 0px;
+}
+
+/* *************** Card Component   ************************ */
+.view_team_members_div {
+  width: 360px;
+  height: 240px;
+  padding: 5px;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: start;
+  background-color: #1f1f1f;
+  margin: 5px;
+  border-radius: 5px;
+}
+.card_profile {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.viewTeamMembers_profile_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.sales_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  border: 1px;
+  background-color: #57c3ff;
+  border-radius: 2px;
+  padding: 0px 3px;
+}
+.card_heading {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-weight: bolder;
+}
