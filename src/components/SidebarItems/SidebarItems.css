@@ -1,0 +1,48 @@
+*::-webkit-scrollbar {
+  scroll-behavior: smooth;
+}
+.sidebarItems {
+  margin: 5px 0;
+  list-style: none;
+  width: 100%;
+}
+
+.sidebar-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 10px;
+}
+.list-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.custom-link {
+  text-decoration: none;
+  color: white;
+}
+
+.sub_list {
+  display: block; /* Change from flex to block for vertical alignment */
+
+  margin-left: 40px;
+  margin-right: 40px;
+  padding: 1px;
+  /* width: 100%; */
+}
+.sub_list li {
+  padding: 5px;
+  margin: 2px;
+  /* border: 1px solid grey; Added border for better visibility */
+  border-radius: 4px;
+  background-color: #333333; /* Light backgroucontrast */
+  color: white;
+  list-style: none;
+  cursor: pointer; /* Indicate interactable items */
+}
+
+.sub_list li:hover {
+  background-color: #3341A5; /* Highlight item on hover */
+}
