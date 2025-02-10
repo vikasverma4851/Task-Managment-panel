@@ -208,7 +208,7 @@
 /* gap: 50px; */
 /* padding: 20px; */
 /* Added to make relative positioning possible */
-*/ .task_status_nav > div {
+.task_status_nav > div {
   position: relative; /* Ensure div aligns with list items */
 }
 
