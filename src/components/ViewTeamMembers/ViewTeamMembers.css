@@ -3,7 +3,7 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  margin: 5px;
+  margin: 5px 15px;
 }
 
 /* search field */
@@ -47,7 +47,10 @@
   border-radius: 5px;
 }
 .contact_details_div {
-  margin: 3px;
+  margin: 2px;
+  font-size:15px;
+  color: #C6C6C6;
+
 }
 
 .card_component_div {
@@ -69,7 +72,7 @@
   height: 240px;
   padding: 5px;
   color: white;
-  padding: 20px;
+  padding: 15px 20px;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -107,4 +110,5 @@
   justify-content: start;
   align-items: center;
   font-weight: bolder;
+
 }

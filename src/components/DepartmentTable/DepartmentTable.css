@@ -1,0 +1,13 @@
+.departmentTable_container {
+    height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+.departmentTable_container:nth-child(odd) {
+  background-color: black;
+}
+.departmentTable_container:nth-child(even) {
+  background-color: #1f1f1f;
+}

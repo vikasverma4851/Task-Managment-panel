@@ -6,10 +6,17 @@
   flex-direction: column;
   color: white;
   overflow-y: auto;
-  
 }
 .sidebar-logo {
   display: flex;
   margin: 20px;
   gap: 3px;
+}
+.notification_link {
+  display: flex;
+  gap: 10px;
+  padding: 10px 10px;
+}
+.notification_link:hover {
+  background-color: #3341a5;
 }

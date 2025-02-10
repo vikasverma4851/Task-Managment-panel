@@ -1,0 +1,102 @@
+.bulk_task_container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 15px;
+  background-color: #1f1f1f;
+  width: 95%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-section {
+  margin-bottom: 24px;
+}
+
+.form-grid {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.input {
+  padding: 8px;
+  border: 1px solid #4a5568;
+  border-radius: 4px;
+  background-color: #1f1f1f;
+  color: white;
+}
+
+.add-task-button {
+  background-color: #4299e1;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-task-button:hover {
+  background-color: #2b6cb0;
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #4a5568;
+}
+
+.task-table th,
+.task-table td {
+  border: 1px solid #4a5568;
+  padding: 8px;
+  text-align: center;
+}
+
+.priority-high {
+  color: #f56565;
+}
+
+.priority-medium {
+  color: #ecc94b;
+}
+
+.priority-low {
+  color: #48bb78;
+}
+
+/* input file browser css */
+
+.file-input-container {
+  position: relative;
+  display: inline-block;
+}
+
+.file-input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.task-table-container {
+  max-height: 405px; /* Set a fixed height for the container */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  margin-bottom: 5px;
+}
+.task-table-container::-webkit-scrollbar {
+  width: 0px;
+}

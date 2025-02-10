@@ -12,6 +12,7 @@ const TaskTable = ({
   highlightIncomplete,
   highlightCompleted,
   highlightInprocess,
+  handleTaskClick,
 }) => {
   const getPriorityClass = (priority) => {
     switch (priority) {
@@ -59,9 +60,16 @@ const TaskTable = ({
               ? "yellow-overlay"
               : ""
           }`}
+          onClick={() => handleTaskClick(task)}
         >
           <div>{task.title}</div>
-          <div>{current.toLocaleDateString()}</div>
+          <div>
+            {current.toLocaleDateString()}{" "}|{" "}
+            {current.toLocaleTimeString([], {
+              hour: "2-digit",
+              minute: "2-digit",
+            })}
+          </div>
           <div className={`high_div ${getPriorityClass(task.priority)}`}>
             {task.priority}
           </div>

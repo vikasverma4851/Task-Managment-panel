@@ -1,0 +1,89 @@
+.department_details_container {
+  color: white;
+  margin: 20px;
+}
+
+.department_details_div {
+  padding: 10px 30px;
+  margin: 10px 0px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #1f1f1f;
+}
+
+.department_details_div div {
+  display: flex;
+  justify-content: start; /* Align label and content to the left */
+}
+
+.department_details_div div p {
+  width: 70%;
+}
+
+.department_details_div div label {
+  width: 30%; /* Ensuring the label takes up a fixed width */
+  font-weight: bold;
+}
+
+.admin_profile_div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+
+.admin_in_charge {
+  height: 40px;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: #915c00;
+  padding: 5px;
+}
+
+.admin_in_charge div {
+  margin-right: 10px;
+}
+
+.admin_in_charge img {
+  width: 30px; /* Set a fixed width for the profile image */
+  height: 30px; /* Maintain aspect ratio */
+  border-radius: 50%;
+}
+
+.departmentDetials_edit_btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 5px;
+  gap: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.departmentDetails_profile_name {
+  display: flex;
+  flex-direction: column;
+}
+.department_people_table_heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #1f1f1f;
+}
+.DepartmentMemberTable_scrollar{
+    height: 300px;
+    overflow-y:scroll;
+}
+.DepartmentMemberTable_scrollar::-webkit-scrollbar{
+    width: 0px;
+}

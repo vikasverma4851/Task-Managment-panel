@@ -1,13 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import hide_icon from "../../assets/hide-icon.png";
 import show_icon from "../../assets/show_icon.png";
+import axios from "axios";
 
 import { toast } from "react-toastify";
+import { UserContext } from "../../App";
 
 const Login = () => {
-  const [user, setUser] = useState("");
+  const { setRole, setToken } = useContext(UserContext);
+  const [response, setResponse] = useState({});
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   // const [error, setError] = useState("");
   const [hide, setHide] = useState(false);
@@ -17,29 +21,48 @@ const Login = () => {
   const [users, setUsers] = useState([]);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const storedUsers = JSON.parse(localStorage.getItem("users") || "[]");
-    setUsers(storedUsers);
-  }, []);
+  // useEffect(() => {
+  //   console.log("Updated Response:", response);
+  // }, [response]);
 
-  function onSubmit(e) {
+  const onSubmit = async (e) => {
     e.preventDefault();
 
-    console.log("Stored User :", users);
+    try {
+      const responseData = await axios.post(
+        "http://16.171.8.84:8085/api/login/admin/auth",
+        { email, password }
+      );
+      setResponse(responseData.data);
 
-    const foundUser = users.find(
-      (storeUser) =>
-        storeUser.user.toLowerCase() === user.toLowerCase() &&
-        storeUser.password === password
-    );
+      localStorage.setItem("role", responseData.data.role);
+      setRole(responseData.data.role);
 
-    if (foundUser) {
+      console.log(responseData.data.role);
+      localStorage.setItem("token", responseData?.data?.token);
+      setToken(responseData.data.token);
       toast.success("Login Successful!");
-      navigate("/home");
-    } else {
-      alert("failed login !!!");
+      console.log(response);
+      navigate("/home/task-overview");
+    } catch (err) {
+      toast.error(err.response.data.message || "Went Something Wrong");
     }
-  }
+
+    // console.log("Stored User :", users);
+
+    // const foundUser = users.find(
+    //   (storeUser) =>
+    //     storeUser.user.toLowerCase() === user.toLowerCase() &&
+    //     storeUser.password === password
+    // );
+
+    // if (foundUser) {
+    //   toast.success("Login Successful!");
+    //   navigate("/home/task-overview");
+    // } else {
+    //   alert("failed login !!!");
+    // }
+  };
 
   function handleHide(e) {
     e.preventDefault();
@@ -69,11 +92,11 @@ const Login = () => {
                 <div>
                   <input
                     className="signup_input"
-                    type="text"
-                    name="username"
+                    type="email"
+                    name="email"
                     placeholder="Email"
-                    value={user}
-                    onChange={(e) => setUser(e.target.value)}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
                 <div className="input_password">

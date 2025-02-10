@@ -1,91 +1,82 @@
-.addNewMembers_container{
-    color: white;
-    margin: 10px;
-    padding: 10px;
- 
-    
+.addNewMembers_container {
+  color: white;
+  margin: 10px;
+  padding: 10px;
 }
-.addNewMembers_container h3{
-    margin: 10px;
-    
+.addNewMembers_container h3 {
+  margin: 10px;
 }
-.addNewMember_form_container{
-    padding: 15px 55px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
-    border: 1px solid grey;
-    border-radius: 10px;
-    background-color: #1F1F1F;
+.addNewMember_form_container {
+  padding: 15px 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  border: 1px solid grey;
+  border-radius: 10px;
+  background-color: #1f1f1f;
 }
-.profile_photo_div{
-    padding-bottom: 20px;
-    display: flex;
-    align-items:start;
-    /* gap: 10px; */
-    column-gap:10px;
-   
+.profile_photo_div {
+  padding-bottom: 20px;
+  display: flex;
+  align-items: start;
+  /* gap: 10px; */
+  column-gap: 10px;
+}
+.profile_photo_edit_div {
+  margin-left: 70px;
+}
+.addNewMembers_inputField_div {
+  display: flex;
+  justify-content: space-evenly;
 
+  gap: 200px;
 }
-.profile_photo_edit_div{
-    margin-left: 70px;
-    
+.addNewMembers_inputField_div > div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /* justify-content: space-between; */
+  gap: 20px;
 }
-.addNewMembers_inputField_div{
-    display: flex;
-    justify-content: space-evenly;
-   
-    gap: 200px;
-
-}
-.addNewMembers_inputField_div >div{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    justify-content: space-between;
-    gap: 20px;
-}
-.addNewMembers_inputField_div>div>div{
-    display: flex;
-    justify-content: space-between;
+.addNewMembers_inputField_div > div > div {
+  display: flex;
+  justify-content: space-between;
 }
 
-.addNewMembers_inputField_div > div >div > input{
-    padding: 10px 40px;
-    background-color: #1F1F1F;
-    border: 1px solid #343B4F;
-    color: white;
-    
+.addNewMembers_inputField_div > div > div > input {
+  padding: 10px 40px;
+  background-color: #1f1f1f;
+  border: 1px solid #343b4f;
+  color: white;
 }
-.shortDesciption_field{
-    margin: 10px 0px;
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    gap: 27px;
-    
+.shortDesciption_field {
+  margin: 10px 0px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 27px;
 }
-.shortDesciption_field textarea{
-    width: 84%;
-    height: 70px;
-    margin-left: 42px;
-    background-color: #1F1F1F;
-    border: 1px solid #343B4F;
-    color: white;
-
+.shortDesciption_field textarea {
+  width: 84%;
+  height: 70px;
+  margin-left: 42px;
+  background-color: #1f1f1f;
+  border: 1px solid #343b4f;
+  color: white;
 }
-.addNewMember_btn{
-    display: flex;
-    justify-content: center;align-items: center;
-    margin: 10px;
+.addNewMember_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
 }
-.addNewMember_btn button{
-    padding: 9px 50px;
-    background-color: #3341A5;
-    color: white;
+.addNewMember_btn button {
+  padding: 9px 50px;
+  background-color: #3341a5;
+  color: white;
 }
 
-.addNewMember_btn button:hover{
-    background-color: #3341E9;
+.addNewMember_btn button:hover {
+  background-color: #3341e9;
 }

@@ -37,6 +37,9 @@
 .profileAccountSettings_form > div >input,textarea{
     padding: 6px 20px;
     border-radius: 5px;
+    width: 60%;
+    background-color: #1f1f1f;
+    border: 1px solid  grey;
 }
 .profileAccount_btn{
     margin-left: 275px;

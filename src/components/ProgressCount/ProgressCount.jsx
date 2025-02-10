@@ -6,9 +6,9 @@ const ProgressCount = ({ title, count, icon, color }) => {
     <div className="progress_count" style={color}>
       <div className="content_count">
         <p>{title}</p>
-        <p className="count_task" style={color} >{count}</p>
+        {/* <p className="count_task" style={color} >{count}</p> */}
       </div>
-      <div>{icon}</div>
+      {/* <div>{icon}</div> */}
     </div>
   );
 };

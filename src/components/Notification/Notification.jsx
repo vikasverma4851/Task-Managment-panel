@@ -62,9 +62,9 @@ const Notification = () => {
   return (
     <div className="notification_container">
       <div className="team_member_search_heading">
-        <h3>View Team Members</h3>
+        <h3 style={{ margin: "10px" }}>View Team Members</h3>
       </div>
-      <div
+      {/* <div
         className="view_team_member_nav"
         style={{
           color: "white",
@@ -81,11 +81,11 @@ const Notification = () => {
         <div>Lorem, ipsum.</div>
         <div>Lorem, ipsum.</div>
         <div>Lorem, ipsum.</div>
-      </div>
+      </div> */}
       <div className="notification_row_div">
-        {dummyNotifications.map((items) => (
-          <NotificationCard title={items.title} message={items.message} />
-        ))}
+        {dummyNotifications.map((items,index) => (
+          <NotificationCard title={items.title} message={items.message} key={index} />
+        ))} 
       </div>
     </div>
   );

@@ -21,7 +21,7 @@ const CardTaskOverview = () => {
         <h3>Task Management App</h3>
       </div>
       <div>
-        <p>
+        <p style={{ color: "#D3D3D3" }}>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium
           rem distinctio recusandae quos tenetur eveniet sed laborum quasi
           consequatur? Dolorum velit amet.

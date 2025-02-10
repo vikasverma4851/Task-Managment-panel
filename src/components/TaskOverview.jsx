@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import "../pages/Dashboard/Dashboard.css";
 import ProgressCount from "./ProgressCount/ProgressCount";
 import { BsThreeDotsVertical } from "react-icons/bs";
@@ -9,8 +9,47 @@ import { MdEditDocument } from "react-icons/md";
 import { IoMdAdd } from "react-icons/io";
 import CardTaskOverview from "./CardTaskOverview/CardTaskOverview";
 import CountTask from "./CountTask/CountTask";
+import { toast } from "react-toastify";
+// import axios from "axios";
+// import { UserContext } from "../App";
 
 const TaskOverview = () => {
+  // const { userDetails, setUserDetails } = useContext(UserContext);
+  // useEffect(() => {
+  //   const fetchUserDetails = async () => {
+  //     try {
+  //       const token = localStorage.getItem("token"); // Get token from localStoarge
+  //       if (!token) {
+  //         toast.error("User not authenticated");
+  //         return;
+  //       }
+
+  //       const response = await axios.get(
+  //         "http://16.171.8.84:8085/api/get/by/id/admin/auth",
+  //         {
+  //           headers: {
+  //             Authorization: `Bearer ${token}`, // Pass token in the headers
+  //           },
+  //         }
+  //       );
+
+  //       // console.log("api comming", response.data.data.name);
+
+  //       setUserDetails(response.data.data);
+  //       console.log(response.data.data.profilePicture);
+  //       console.log(userDetails);
+
+  //       toast.success("User details Fetched Successfully");
+  //     } catch (error) {
+  //       toast.error(error.response.data.message);
+  //       console.error("Error fetching user details:", error);
+  //     }
+  //   };
+
+  //   fetchUserDetails();
+
+  // }, []);
+
   const countData = [
     {
       image: <GoProjectRoadmap style={{ color: "white" }} />,
@@ -46,7 +85,7 @@ const TaskOverview = () => {
       icon: <IoMdAdd />,
       color: {
         border: "2px solid aqua",
-        backgroundColor: "#E2FEFE",
+        backgroundColor: "rgb(226, 254, 254,0.2)",
         color: "aqua",
       },
     },
@@ -56,7 +95,7 @@ const TaskOverview = () => {
       icon: <IoMdAdd />,
       color: {
         border: "2px solid #E1C013 ",
-        backgroundColor: "#FFFF8F",
+        backgroundColor: "rgb(255, 255, 143,0.3)",
         color: "#E1C013",
       },
     },
@@ -66,7 +105,7 @@ const TaskOverview = () => {
       icon: <IoMdAdd />,
       color: {
         border: "2px solid green",
-        backgroundColor: "#ADEBB3",
+        backgroundColor: "rgb(173, 235, 179,0.2)",
         color: "green",
       },
     },
@@ -76,12 +115,13 @@ const TaskOverview = () => {
       <div className="scroller">
         <div className="count_task_container">
           {countData.map((items, index) => (
-            <div>
+            <div key={index}>
               <CountTask
                 image={items.image}
                 title={items.title}
                 count={items.count}
                 icon={items.icon}
+                key={index}
               />
             </div>
           ))}
@@ -93,6 +133,7 @@ const TaskOverview = () => {
               count={items.count}
               icon={items.icon}
               color={items.color}
+              key={index}
             />
           ))}
         </div>

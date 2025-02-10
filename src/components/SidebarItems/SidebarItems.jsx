@@ -9,28 +9,23 @@ const SidebarItems = ({ item }) => {
   const [isRotated, setIsRotated] = useState(false);
 
   const submenu = {
-    1: [
-      { name: "Task Overview", path: "/home/task-overview" },
-      ,
-      { name: "Team Overview", path: "/home/team-overview" },
-      { name: "Upcoming Deadlines", path: "/home/upcoming-deadlines" },
-    ],
+    // 1: [
+    //   { name: "Task Overview", path: "/home/task-overview" },
+    //   ,
+    //   { name: "Team Overview", path: "/home/team-overview" },
+    //   { name: "Upcoming Deadlines", path: "/home/upcoming-deadlines" },
+    // ],
     2: [
       { name: "View All Task", path: "/home/view-all-tasks" },
       ,
-      { name: "Create New Task", path: "/home/create-new-task" },
+      { name: "Create New Task", path: "/home/create-new-task-schedule" },
     ],
     3: [
       { name: "View Team Members", path: "/home/view-team-members" },
       ,
       { name: "Add New Member", path: "/home/add-new-member" },
     ],
-    4: [
-      { name: "Meeting Schedule", path: "/home/meeting-schedule" },
-      ,
-      { name: "Client Updates", path: "/home/client-updates" },
-      { name: "Reports", path: "/home/reports" },
-    ],
+    // 4: [{ name: "Calender Week", path: "/home/calender-view-week" }],
     5: [
       {
         name: "Profile/Account Settings",
@@ -38,7 +33,17 @@ const SidebarItems = ({ item }) => {
       },
       ,
       { name: "Change Password", path: "/home/change-password" },
-      { name: "Notification", path: "/home/notification" },
+    ],
+    6: [
+      {
+        name: "View all Admins",
+        path: "/home/view-all-admins",
+      },
+      ,
+      { name: "Create New Admin", path: "/home/create-new-admin" },
+      { name: "Modify Admin Role", path: "/home/modify-admin-role" },
+      { name: "Remove Admin", path: "/home/remove-admin" },
+      { name: "Create Department", path: "/home/create-department" },
     ],
   };
 
@@ -78,7 +83,7 @@ const SidebarItems = ({ item }) => {
         <div className="sub_list">
           <ul>
             {submenu[item.id]?.map((subItem, index) => (
-              <Link style={{textDecoration:'none'}} to={subItem.path}>
+              <Link style={{ textDecoration: "none" }} to={subItem.path}>
                 <li key={index}>{subItem.name}</li>
               </Link>
             ))}

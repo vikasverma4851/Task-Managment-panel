@@ -3,7 +3,7 @@ import "./CountTask.css";
 
 const CountTask = ({ image,title,count,icon}) => {
   return (
-    <div className="count_container">
+    <div className="count_container" >
       <div className="count_logo">
         {image}
       </div>
@@ -13,7 +13,7 @@ const CountTask = ({ image,title,count,icon}) => {
         <p>{count}</p>
       </div>
       <div>
-        {icon}
+        {/* {icon} */}
       </div>
     </div>
   );

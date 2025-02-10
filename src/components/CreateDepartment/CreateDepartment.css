@@ -1,0 +1,60 @@
+.create_department_container {
+  margin: 20px;
+}
+.create_department_header {
+  color: white;
+}
+.create_department_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 40px;
+  padding: 50px;
+}
+.create_department_form div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.create_department_form div input {
+  width: 60%;
+  background-color: #1f1f1f;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+}
+.create_department_form div label {
+  color: white;
+}
+
+textarea {
+  width: 60%;
+  height: 90px;
+  background-color: #1f1f1f;
+  color: white;
+}
+
+.create_department_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+.create_department_btn button {
+  padding: 10px 30px;
+  background-color: #3341a5;
+  color: white;
+}
+.assignAdmin_para {
+  color: white;
+  margin-left: 420px;
+  margin-top: -30px;
+}
+.createDepartment_div {
+  background-color: #1f1f1f;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 30px 10px;
+}

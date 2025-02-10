@@ -1,0 +1,114 @@
+.CalenderViewWeek_container {
+  margin: 20px;
+}
+.task-calendar {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: none;
+}
+
+.calendar-table th,
+.calendar-table td {
+  padding: 15px 10px;
+  text-align: center;
+}
+
+.calendar-table th {
+  font-weight: bold;
+  background-color: #1f1f1f;
+}
+
+.day {
+  background-color: #1f1f1f;
+  color: #f0f0f0;
+}
+
+.task-title {
+  font-weight: bold;
+  background-color: #f8f9fa;
+}
+/* 
+.task-item {
+  height: 10px;
+  width: 100%;
+  background-color: #f8f9fa;
+  font-size: 14px;
+  color: #333;
+  padding: 7px;
+  border-radius: 5px;
+  word-wrap: break-word;
+} */
+.task-item {
+  display: flex; /* Aligns text horizontally */
+  justify-content: center; /* Centers the text */
+  align-items: center; /* Centers the text vertically */
+  width: 100%; /* Takes full width of the cell */
+  height: 30px; /* Restricts the height */
+  background-color: currentColor; /* Optional: Use priority-based color */
+  color: white; /* Ensures text is readable */
+  font-size: 10px; /* Adjust text size to fit */
+  overflow: hidden; /* Prevents text from overflowing */
+  border-radius: 4px; /* Adds rounded corners for better appearance */
+}
+
+.priority-high {
+  background-color: #00234b;
+  color: white;
+}
+
+.priority-medium {
+  background-color: #472d00;
+  /* color: black; */
+}
+
+.priority-low {
+  background-color: #035013;
+  color: white;
+}
+
+.date-navigator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1f1f1f; /* Dark background */
+  padding: 6px;
+  gap: 20px; /* Space between elements */
+  border-radius: 10px;
+}
+
+.nav-button {
+  background-color: #555; /* Grey button background */
+  border: none;
+  border-radius: 8px;
+  padding: 7px 13px;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+  background-color: #777;  /* Slightly lighter on hover */
+}
+
+.date-range {
+  color: white;
+  font-size: 13px;
+}
+
+.calenderView_heading {
+  height: 50px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #1f1f1f; */
+}
+

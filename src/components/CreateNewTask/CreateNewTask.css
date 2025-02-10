@@ -43,13 +43,12 @@
 } */
 .createNewTask_form .Schedule_Task_div {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 50px;
   /* Space between Task Detail and Schedule */
   align-items: center;
   width: 100%; /* Make it span the full container width */
-  margin-bottom: 20px; /* Add spacing below the section */
   padding: 10px; /* Add padding for better spacing inside */
-  background-color: #373c42; /* Optional: Add a background color for better visibility */
   border-radius: 5px; /* Optional: Rounded corners */
   color: white; /* Text color */
   font-weight: 600; /* Make the text bold */
@@ -57,10 +56,15 @@
 
 .createNewTask_form {
   width: 100%;
-  max-width: 800px; /* Restrict width for better readability */
+  max-width: 950px; /* Restrict width for better readability */
+  height: 550px;
   display: flex;
   flex-direction: column;
-  gap: 25px; /* Consistent spacing between form groups */
+  gap: 15px; /* Consistent spacing between form groups */
+  border: 1px solid grey;
+  padding: 10px 10px;
+  border-radius: 10px;
+  background-color: #1f1f1f;
 }
 
 .createNewTask_form > div {
@@ -106,7 +110,6 @@
   background-color: #3341e9;
 }
 
-
 /* createNewTaskSchedule Component css */
 
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -114,3 +117,34 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer; /* Optional: Changes the cursor to pointer */
 }
 
+.one_two_icon {
+  color: white;
+  background-color: #3341e9;
+  border: 1px solid grey;
+  border-radius: 50%;
+  padding: 1px 4px;
+  font-size: 12px;
+}
+.freq_btn {
+  display: flex;
+  width: 80%;
+  padding: 10px;
+  /* border: 1px solid #bdc3c7; */
+  border-radius: 5px;
+  background-color: #1f1f1f; /* Darker background for input */
+  color: white;
+  font-size: 14px;
+  gap: 20px;
+}
+.freq_btn div {
+  display: flex;
+  gap: 5px;
+}
+.freq_btn div label {
+  font-weight: 500;
+}
+.freq_btn button {
+  margin-left: 0px;
+  padding: 6px 15px;
+  background-color: #4e4b4b;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import "../CreateNewTask/CreateNewTask.css";
+import { Link } from "react-router-dom";
 import { IoMdPerson } from "react-icons/io";
 
 const CreateNewTaskSchedule = () => {
@@ -8,7 +9,9 @@ const CreateNewTaskSchedule = () => {
       <div className="createNewTask_heading">
         <h3>Create Schedule Task</h3>
         <div className="createNewTask_buttons">
-          <button type="submit">Bulk Task</button>
+          <button type="submit">
+            <Link to={"/home/create-new-task"}  style={{ textDecoration: "none", color: "inherit" }}>Schedule</Link>
+          </button>
           <button type="submit">Single Task</button>
         </div>
       </div>
@@ -17,6 +20,7 @@ const CreateNewTaskSchedule = () => {
         <form
           className="createNewTask_form
             "
+          style={{ border: "none" }}
         >
           <div>
             <label htmlFor="taskTitle">
@@ -60,7 +64,13 @@ const CreateNewTaskSchedule = () => {
             <label htmlFor="startDate">
               <IoMdPerson /> Start Date:
             </label>
-            <input type="date" name="startDate" id="" placeholder="Start Date" style={{color:'white'}} />
+            <input
+              type="date"
+              name="startDate"
+              id=""
+              placeholder="Start Date"
+              style={{ color: "white" }}
+            />
           </div>
           <div>
             <label htmlFor="dueDate">
@@ -79,7 +89,7 @@ const CreateNewTaskSchedule = () => {
               style={{ paddingBottom: "50px" }}
             />
           </div>
-          <div >
+          <div>
             <button type="submit">Create Task</button>
           </div>
         </form>

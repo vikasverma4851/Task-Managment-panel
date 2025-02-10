@@ -1,0 +1,27 @@
+.departmentMemberTable_container {
+  display: flex;
+  height: 60px;
+    overflow: hidden;
+}
+.departmentMemberTable_container:nth-child(odd) {
+  background-color: black;
+}
+.departmentMemberTable_container:nth-child(even) {
+  background-color: #1f1f1f;
+}
+.departmentMemberTable_div {
+  width: 100%;
+  display: grid;
+  grid-template-columns:190px 190px 240px 150px 250px 100px; /* Define the width of each column */
+  align-items: center;
+  padding: 10px;
+  gap: 20px;
+}
+
+.departmentMemberTable_profile_name {
+    width: 200px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-right: 100px;
+}

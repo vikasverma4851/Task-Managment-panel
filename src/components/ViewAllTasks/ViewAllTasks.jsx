@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import "./ViewAllTasks.css";
-
+import { Link, useNavigate } from "react-router-dom";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import { FaUserEdit } from "react-icons/fa";
@@ -9,7 +9,7 @@ import TaskTable from "../TaskTable/TaskTable";
 const ViewAllTasks = () => {
   const [activeTab, setActiveTab] = useState(0);
   const scrollContainerRef = useRef(null);
- 
+  const navigate = useNavigate();
 
   const tasks = [
     {
@@ -54,6 +54,27 @@ const ViewAllTasks = () => {
       priority: "High",
       status: "Online",
     },
+    {
+      id: 7,
+      title: "Task 1",
+      dueDate: "2025-01-30",
+      priority: "High",
+      status: "Pending",
+    },
+    {
+      id: 8,
+      title: "Task 2",
+      dueDate: "2025-02-10",
+      priority: "Medium",
+      status: "InProcess",
+    },
+    {
+      id: 9,
+      title: "Task 3",
+      dueDate: "2025-01-28",
+      priority: "Low",
+      status: "Online",
+    },
   ];
 
   const taskStatusNav = [
@@ -91,6 +112,11 @@ const ViewAllTasks = () => {
       top: 200,
       behavior: "smooth",
     });
+  };
+
+  const handleTaskClick = (tasks) => {
+    console.log("Task clicked:", tasks);
+    navigate(`/home/task/${tasks.id}`, { state: tasks });
   };
 
   return (
@@ -148,36 +174,33 @@ const ViewAllTasks = () => {
         </div>
 
         {/* Rows  */}
-        <div
-          className="scrollable-task-table"
-          ref={scrollContainerRef}
-          
-        >
+        <div className="scrollable-task-table" ref={scrollContainerRef}>
           <TaskTable
             tasks={getFilteredTasks()}
             highlightIncomplete={activeTab === 1}
             highlightCompleted={activeTab === 2}
             highlightInprocess={activeTab === 3}
+            handleTaskClick={handleTaskClick}
           />
         </div>
-
-        {/* Page more navigator */}
       </div>
+      {/* Page more navigator */}
       <div className="page_navigator">
-        <div>
-          {}
-        </div>
+        <div>{}</div>
         <div className="change_page_div">
           <div className="row_per_page_div">
             <p>Rows per page: </p>
             <p>5</p>
           </div>
           <div>
-            <button onClick={handleScrollBack} className="back_forward_icons" >
-              <IoMdArrowRoundBack  />
+            <button onClick={handleScrollBack} className="back_forward_icons">
+              <IoMdArrowRoundBack />
             </button>
-            <button  onClick={handleScrollForward} className="back_forward_icons" >
-              <IoMdArrowRoundForward  />
+            <button
+              onClick={handleScrollForward}
+              className="back_forward_icons"
+            >
+              <IoMdArrowRoundForward />
             </button>
           </div>
         </div>

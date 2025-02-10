@@ -11,6 +11,15 @@ import ProfileAccountSettings from "../ProfileAccountSettings/ProfileAccountSett
 import CreateNewTask from "../CreateNewTask/CreateNewTask";
 import AddNewMembers from "../AddNewMembers/AddNewMembers";
 import CreateNewTaskSchedule from "../CreateNewTaskSchedule/CreateNewTaskSchedule";
+import BulkTask from "../BulkTask/BulkTask";
+import CalendarViewWeek from "../CalenderViewWeek/CalenderViewWeek";
+import CalenderViewDay from "../CalenderViewDay/CalednerViewDay";
+import CreateDepartment from "../CreateDepartment/CreateDepartment";
+import DepartmentList from "../DepartmentlList/DepartmentList";
+import DepartmentDetails from "../DepartmentDetails/DepartmentDetails";
+import TaskDetails from "../TaskDetails/TaskDetails";
+import ViewAllAdmins from "../ViewAllAdmins/ViewAllAdmins";
+import CreateNewAdmin from "../CreateNewAdmin/CreateNewAdmin";
 
 const RightContainer = () => {
   //CountTask array
@@ -30,7 +39,21 @@ const RightContainer = () => {
           />
           <Route path="create-new-task" element={<CreateNewTask />} />
           <Route path="add-new-member" element={<AddNewMembers />} />
-          <Route path="create-new-task-schedule" element={<CreateNewTaskSchedule />} />
+          <Route
+            path="create-new-task-schedule"
+            element={<CreateNewTaskSchedule />}
+          />
+          <Route path="bulk-task" element={<BulkTask />} />
+          <Route path="calender-view-week" element={<CalendarViewWeek />} />
+          <Route path="calender-view-day" element={<CalenderViewDay />} />
+          <Route path="create-department" element={<CreateDepartment />} />
+          <Route path="department-list" element={<DepartmentList />} />
+          <Route path="department-details" element={<DepartmentDetails />} />
+          <Route path="task-details" element={<TaskDetails />} />
+          <Route path="view-all-admins" element={<ViewAllAdmins />} />
+          <Route path="task/:id" element={<TaskDetails />} />
+          <Route path="create-new-admin" element={<CreateNewAdmin />} />
+          
         </Routes>
 
         {/* Render the child route component here */}

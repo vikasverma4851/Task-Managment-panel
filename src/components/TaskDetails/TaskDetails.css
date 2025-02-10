@@ -1,0 +1,16 @@
+.taskDetails_container {
+  color: white;
+  margin: 20px;
+}
+.task_detail_description_content{
+  width: 100%;
+  height: 275px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.task_detail_description_content::-webkit-scrollbar{
+  width: 0px;
+}
