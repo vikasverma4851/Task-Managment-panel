@@ -1,16 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "../CreateNewTask/CreateNewTask.css";
 import { Link } from "react-router-dom";
 import { IoMdPerson } from "react-icons/io";
 
 const CreateNewTaskSchedule = () => {
+  const [selectedFiles, setSelectedFiles] = useState([]);
+
+  const handleFileChange = (event) => {
+    const files = Array.from(event.target.files);
+    setSelectedFiles(files);
+  };
   return (
     <div className="createNewTask_container">
       <div className="createNewTask_heading">
         <h3>Create Schedule Task</h3>
         <div className="createNewTask_buttons">
           <button type="submit">
-            <Link to={"/home/create-new-task"}  style={{ textDecoration: "none", color: "inherit" }}>Schedule</Link>
+            <Link
+              to={"/home/create-new-task"}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              Schedule
+            </Link>
           </button>
           <button type="submit">Single Task</button>
         </div>
@@ -87,7 +98,18 @@ const CreateNewTaskSchedule = () => {
               name="fileAttachments"
               placeholder="Upload File"
               style={{ paddingBottom: "50px" }}
+              onChange={handleFileChange}
             />
+            {/* {selectedFiles.length > 0 && (
+              <div>
+                <h3>Selected files:</h3>
+                <ul>
+                  {selectedFiles.map((file, index) => (
+                    <li key={index}>{file.name}</li>
+                  ))}
+                </ul>
+              </div>
+            )} */}
           </div>
           <div>
             <button type="submit">Create Task</button>
